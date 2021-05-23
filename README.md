@@ -15,12 +15,31 @@ npm install --save comp-out
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'comp-out'
+import { CompCard as Card, CompAppointment as Appt, CompProfile as Profile} from 'comp-out'
 import 'comp-out/dist/index.css'
 
-class Example extends Component {
+class App extends Component {
   render() {
-    return <MyComponent />
+    return (
+        <Card
+          img = 'example.png'
+          title = 'Hello World'
+          content = 'lorum ipsum'
+        />
+
+        <Appt
+          time = '12 Jan 2020, 8am - 10am'
+          requesterImg = 'example.png'
+          requesterName = 'Vision'
+          requesterTitle = 'Synthozoid'
+        />
+
+        <Profile
+          img = 'example.png'
+          name = 'Vision'
+          title = 'Synthozoid'
+        />
+      )
   }
 }
 ```
